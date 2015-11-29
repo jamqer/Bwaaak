@@ -1,11 +1,12 @@
 package com.jamqer.bwaaak.bwaaak.API;
 
 
+
 import com.jamqer.bwaaak.bwaaak.Model.getPhotoResponse;
-
 import java.util.Map;
-import java.util.Observable;
 
+
+import retrofit.Callback;
 import retrofit.http.GET;
 import retrofit.http.QueryMap;
 
@@ -14,6 +15,6 @@ import retrofit.http.QueryMap;
  */
 public interface PX500API {
 
-    @GET("/photos/search?")
-    rx.Observable<getPhotoResponse> getPhotosByName(@QueryMap Map<String,String> StringMap);
+    @GET("/photos/search")
+    void getPhotosByName(@QueryMap Map<String,String> queryMap,Callback<getPhotoResponse> callback);
 }

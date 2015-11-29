@@ -31,4 +31,5 @@ public class ImagesViewFragment extends Fragment {
         return inputViewFragment;
     }
 
+
 }

@@ -17,11 +17,21 @@ public class MainActivityContainer extends AppCompatActivity {
         setContentView(R.layout.layout_main_activity);
 
         if (savedInstanceState == null){
-            getFragmentManager()
+            getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.fragmentContainer, new LoginFragment())
                     .commit();
 
         }
     }
+
+    @Override
+    public void onBackPressed() {
+            if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
+                this.finish();
+            } else {
+                getSupportFragmentManager().popBackStack();
+            }
+        }
+
 }
