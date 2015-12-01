@@ -25,9 +25,10 @@ public class LoginFragment extends Fragment {
 
     @Bind(R.id.imageViewLogo) ImageView mImageViewLogo;
 
-    public LoginFragment(){
+    public LoginFragment() {
 
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -43,15 +44,13 @@ public class LoginFragment extends Fragment {
         new RotateLayoutObject()
                 .rotateObject(getActivity(), mImageViewLogo);
 
-        new FetchPicturesForServices().fetchPictures();
 
-        /*
         getFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragmentContainer, new ImagesViewFragment())
                 .addToBackStack(null)
                 .commit();
-                */
+
     }
 
     @Override
