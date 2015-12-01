@@ -11,7 +11,6 @@ import android.widget.ImageView;
 
 import com.jamqer.bwaaak.bwaaak.Animations.RotateLayoutObject;
 import com.jamqer.bwaaak.bwaaak.R;
-import com.jamqer.bwaaak.bwaaak.Services.FetchPicturesForServices;
 
 
 import butterknife.Bind;
